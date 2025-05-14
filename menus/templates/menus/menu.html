@@ -1,0 +1,5 @@
+<ul class="tree-menu">
+    {% for node in nodes %}
+        {% include "menus/menu_node.html" with node=node expanded=expanded current_path=current_path %}
+    {% endfor %}
+</ul>

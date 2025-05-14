@@ -1,0 +1,56 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  font-family:system-ui,sans-serif;
+  color:#222;
+}
+
+body { display: flex; min-height: 100vh; }
+
+.layout{
+  flex:1;
+  display:flex;
+}
+
+aside {
+  width: 240px;
+  padding: 1.25rem;
+  background: #f6f8fa;
+  border-right: 1px solid #e1e4e8;
+  overflow-y: auto;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+footer{
+  padding:1rem 1.5rem;
+  background:#f0f2f4;
+  border-top:1px solid #e1e4e8;
+  font-size:.9rem;
+
+  /* меню в одну строку по центру */
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.2rem;
+}
+footer .tree-menu        { margin:0; }
+footer .tree-menu > li   { display:inline-block; margin:0 .8rem; }
+footer .tree-menu ul     { display:none; }
+
+/* ─── дерево меню (осталось без изменений) ─── */
+.tree-menu ul               { list-style:none; margin-left:1rem; padding:0; }
+.tree-menu li               { margin:.25rem 0; }
+.tree-menu a                { text-decoration:none; color:#0d6efd; } /* bootstrap primary */
+.tree-menu a:hover          { text-decoration:underline; }
+.tree-menu li.is-active > a { font-weight:600; color:#dc3545; }       /* bootstrap danger */
+
+.tree-menu ul.collapsed     { display:none; }
+
+/* стрелочка ▸ раскрытия */
+.tree-menu li> a::before{content:"▸";display:inline-block;margin-right:.25rem;transition:transform .2s;}
+.tree-menu li.is-active> a::before,
+.tree-menu li> ul:not(.collapsed) ~ a::before{transform:rotate(90deg);}

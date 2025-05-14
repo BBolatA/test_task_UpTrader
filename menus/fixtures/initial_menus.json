@@ -1,0 +1,117 @@
+[
+{
+  "model": "menus.menu",
+  "pk": 1,
+  "fields": {
+    "name": "main_menu",
+    "verbose_name": "Меню"
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 1,
+  "fields": {
+    "menu": 1,
+    "parent": null,
+    "title": "Главная",
+    "url": "/",
+    "sort_order": 1
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 2,
+  "fields": {
+    "menu": 1,
+    "parent": null,
+    "title": "О нас",
+    "url": "http://127.0.0.1:7000/about/",
+    "sort_order": 2
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 3,
+  "fields": {
+    "menu": 1,
+    "parent": null,
+    "title": "Новости",
+    "url": "news:list",
+    "sort_order": 3
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 4,
+  "fields": {
+    "menu": 1,
+    "parent": 3,
+    "title": "Лента",
+    "url": "news:list",
+    "sort_order": 1
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 5,
+  "fields": {
+    "menu": 1,
+    "parent": 3,
+    "title": "Категории",
+    "url": "news:categories",
+    "sort_order": 2
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 6,
+  "fields": {
+    "menu": 1,
+    "parent": 5,
+    "title": "IT",
+    "url": "http://127.0.0.1:7000/news/categories/it",
+    "sort_order": 1
+  }
+},
+{
+  "model": "menus.menu",
+  "pk": 2,
+  "fields": {
+    "name": "footer_menu",
+    "verbose_name": "Футер"
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 8,
+  "fields": {
+    "menu": 2,
+    "parent": null,
+    "title": "О проекте",
+    "url": "/about/",
+    "sort_order": 1
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 9,
+  "fields": {
+    "menu": 2,
+    "parent": null,
+    "title": "Контакты",
+    "url": "/contacts/",
+    "sort_order": 2
+  }
+},
+{
+  "model": "menus.menuitem",
+  "pk": 10,
+  "fields": {
+    "menu": 2,
+    "parent": null,
+    "title": "Политика конфиденциальности",
+    "url": "/privacy/",
+    "sort_order": 3
+  }
+}
+]
