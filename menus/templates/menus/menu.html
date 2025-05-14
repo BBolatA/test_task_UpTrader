@@ -1,5 +1,5 @@
-<ul class="tree-menu">
+<ul class="tree-menu list-group list-group-flush">
     {% for node in nodes %}
-        {% include "menus/menu_node.html" with node=node expanded=expanded current_path=current_path %}
+        {% include "menus/menu_node.html" with node=node expanded=expanded active_id=active_id %}
     {% endfor %}
 </ul>

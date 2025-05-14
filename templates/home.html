@@ -1,3 +1,56 @@
 {% extends "base.html" %}
 {% block title %}Главная{% endblock %}
-{% block content %}<h1>Главная</h1>{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-3">
+      <h1 class="display-5 fw-bold">Тестовое задание (UpTrader)</h1>
+      <p class="col-md-8 fs-5">
+        Мини-проект показывает, как хранить и выводить древовидное меню
+        одним запросом без сторонних пакетов.
+      </p>
+      <a class="btn btn-primary btn-lg" href="{% url 'about' %}">
+        Узнать больше
+      </a>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Меню в БД</h5>
+          <p class="card-text small">
+            Всё дерево хранится в таблицах <code>Menu</code> и <code>MenuItem</code>,
+            редактируется через стандартную админку.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Template-tag</h5>
+          <p class="card-text small">
+              Для вставки меню используется тег<br>
+              <code>
+                  {% templatetag openblock %} draw_menu 'main_menu' {% templatetag closeblock %}
+              </code>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Один SQL</h5>
+          <p class="card-text small">
+            На отрисовку каждого меню идёт ровно один запрос
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

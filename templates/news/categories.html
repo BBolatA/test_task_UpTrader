@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Категории новостей{% endblock %}
+
 {% block content %}
-  <h1>Категории</h1>
-  <ul>
-    <li><a href="{% url 'news:cat-it' %}">IT</a></li>
-  </ul>
+<div class="container">
+  <h1 class="mb-4">Категории</h1>
+
+  <div class="list-group">
+    <a href="{% url 'news:cat-it' %}" class="list-group-item list-group-item-action">
+      IT
+    </a>
+    <span class="list-group-item disabled">Пример 2</span>
+    <span class="list-group-item disabled">Пример 3</span>
+  </div>
+</div>
 {% endblock %}
