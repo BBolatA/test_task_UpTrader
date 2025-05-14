@@ -87,7 +87,7 @@
   "fields": {
     "menu": 2,
     "parent": null,
-    "title": "О проекте",
+    "title": "О нас",
     "url": "/about/",
     "sort_order": 1
   }
@@ -97,9 +97,9 @@
   "pk": 9,
   "fields": {
     "menu": 2,
-    "parent": null,
-    "title": "Контакты",
-    "url": "/contacts/",
+    "parent": 10,
+    "title": "Категории",
+    "url": "news:categories",
     "sort_order": 2
   }
 },
@@ -109,8 +109,8 @@
   "fields": {
     "menu": 2,
     "parent": null,
-    "title": "Политика конфиденциальности",
-    "url": "/privacy/",
+    "title": "Новости",
+    "url": "news:list",
     "sort_order": 3
   }
 }
